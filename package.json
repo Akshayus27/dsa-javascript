@@ -1,0 +1,24 @@
+{
+  "name": "dsa-javasacript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Akshayus27/dsa-javasacript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Akshayus27/dsa-javasacript/issues"
+  },
+  "homepage": "https://github.com/Akshayus27/dsa-javasacript#readme",
+  "dependencies": {
+    "@types/node": "^17.0.31",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.4"
+  }
+}

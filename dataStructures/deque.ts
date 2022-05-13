@@ -37,7 +37,6 @@ export class Deque {
      */
     public insertFirst(item: any): void {
         if (this.isFull()) {
-            console.log(`🚀 ~ file: deque.ts ~ line 24 ~ Deque ~ insertFirst`);
             console.warn('Deque is Overflowing');
             process.exit(0);
         }
@@ -61,7 +60,6 @@ export class Deque {
      */
     public insertLast(item: any): void {
         if (this.isFull()) {
-            console.log(`🚀 ~ file: deque.ts ~ line 42 ~ Deque ~ insertLast`);
             console.warn('Deque is Overflowing');
             process.exit(0);
         } 
@@ -83,7 +81,6 @@ export class Deque {
      */
     public removeFirst(): void {
         if (this.isEmpty()) {
-            console.log(`🚀 ~ file: deque.ts ~ line 54 ~ Deque ~ removeFirst`);
             console.warn('Deque is Empty');
             process.exit(0);
         }
@@ -102,7 +99,6 @@ export class Deque {
      */
     public removeLast(): void {
         if (this.isEmpty()) {
-            console.log(`🚀 ~ file: deque.ts ~ line 78 ~ Deque ~ removeLast`);
             console.warn('Deque is Empty');
             process.exit(0);
         }

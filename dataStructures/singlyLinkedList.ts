@@ -59,7 +59,6 @@ export class SinglyLinkedList {
       node.next = currentNode.next;
       currentNode.next = node;
     } else {
-      console.log(`🚀 ~ file: singlyLinkedList.ts ~ line 62 ~ SinglyLinkedList ~ insert`);
       console.warn('Index out of range');
       process.exit(0);
     }
@@ -70,7 +69,6 @@ export class SinglyLinkedList {
    */
   public removeFirst(): void {
     if (!this.head) {
-      console.log(`🚀 ~ file: singlyLinkedList.ts ~ line 74 ~ SinglyLinkedList ~ removeFirst`);
       console.warn('List is empty');
       process.exit(0);
     } else {
@@ -83,7 +81,6 @@ export class SinglyLinkedList {
    */
   public removeLast(): void {
     if (!this.head) {
-      console.log(`🚀 ~ file: singlyLinkedList.ts ~ line 87 ~ SinglyLinkedList ~ removeFirst`);
       console.warn('List is empty');
       process.exit(0);
     } else {
@@ -115,7 +112,6 @@ export class SinglyLinkedList {
     if (currentIdx === index - 1) {
       currentNode.next = currentNode.next.next;
     } else {
-      console.log(`🚀 ~ file: singlyLinkedList.ts ~ line 119 ~ SinglyLinkedList ~ remove`);
       console.warn('Index out of range');
       process.exit(0);
     }
@@ -150,14 +146,12 @@ export class SinglyLinkedList {
     while (currentNode !== null) {
       if (idx === 0) {
         console.log(`[`);
-        console.log(currentNode, ' ,');
-        console.log();
+        console.log(`  ${currentNode.data} ---> ${currentNode.next?.data || 'null'} ,`);
       } else if (currentNode.next === null) {
-          console.log(currentNode);
-          console.log(`]`);
+        console.log(`  ${currentNode.data} ---> ${currentNode.next?.data || 'null'} ,`);
+        console.log(`]`);
       } else {
-        console.log(currentNode, ' ,');
-        console.log();
+        console.log(`  ${currentNode.data} ---> ${currentNode.next?.data || 'null'} ,`);
       }
       currentNode = currentNode.next;
       idx++;

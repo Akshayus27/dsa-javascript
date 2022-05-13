@@ -37,7 +37,6 @@ export class Queue {
    */
   public enqueue(item: any): void {
     if (this.isFull()) {
-      console.log(`🚀 ~ file: queue.ts ~ line 24 ~ Queue ~ enqueue`);
       console.warn('Queue is full');
       process.exit(0);
     }
@@ -55,7 +54,6 @@ export class Queue {
    */
   public dequeue(): void {
     if (this.isEmpty()) {
-      console.log(`🚀 ~ file: queue.ts ~ line 35 ~ Queue ~ dequeue`);
       console.warn('Queue is Empty');
       process.exit(0);
     }
@@ -70,7 +68,6 @@ export class Queue {
    */
   public peek(): number {
     if (this.isEmpty()) {
-      console.log(`🚀 ~ file: queue.ts ~ line 45 ~ Queue ~ peek`);
       console.warn('Queue is empty to peek');
       process.exit(0);
     }

@@ -35,7 +35,6 @@ export class Stack {
    */
   push(item: any): any {
     if (this.isFull()) {
-      console.log(`🚀 ~ file: stack.ts ~ line 22 ~ Stack ~ push`);
       console.warn('Stack is full');
       process.exit(0);
     }
@@ -50,7 +49,6 @@ export class Stack {
    */
   pop(): any {
     if (this.isEmpty()) {
-      console.log(`🚀 ~ file: stack.ts ~ line 31 ~ Stack ~ pop`);
       console.warn('Stack is empty');
       process.exit(0);
     }
@@ -63,7 +61,6 @@ export class Stack {
    */ 
   peek(): any {
     if (this.isEmpty()) {
-      console.log(`🚀 ~ file: stack.ts ~ line 42 ~ Stack ~ peek`);
       console.warn('Stack is empty to peek');
       process.exit(0);
     }

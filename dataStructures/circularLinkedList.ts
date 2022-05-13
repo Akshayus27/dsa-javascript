@@ -71,7 +71,6 @@ export class CircularLinkedList {
       nextNode.previous = node;
       node.next = nextNode;
     } else {
-      console.log(`🚀 ~ file: doublyLinkedList.ts ~ line 62 ~ DoublyLinkedList ~ insert`);
       console.warn('Index out of range');
       process.exit(0);
     }
@@ -82,7 +81,6 @@ export class CircularLinkedList {
    */
   public removeFirst(): void {
     if (!this.head) {
-      console.log(`🚀 ~ file: doublyLinkedList.ts ~ line 74 ~ DoublyLinkedList ~ removeFirst`);
       console.warn('List is empty');
       process.exit(0);
     } else {
@@ -97,7 +95,6 @@ export class CircularLinkedList {
    */
   public removeLast(): void {
     if (!this.head) {
-      console.log(`🚀 ~ file: doublyLinkedList.ts ~ line 87 ~ DoublyLinkedList ~ removeFirst`);
       console.warn('List is empty');
       process.exit(0);
     }
@@ -130,7 +127,6 @@ export class CircularLinkedList {
         currentNode.next.previous = currentNode.previous;
       }
     } else {
-      console.log(`🚀 ~ file: doublyLinkedList.ts ~ line 119 ~ DoublyLinkedList ~ remove`);
       console.warn('Index out of range');
       process.exit(0);
     }
@@ -146,16 +142,25 @@ export class CircularLinkedList {
     while (true) {
       if (idx === 0) {
         console.log(`[`);
-        console.log(currentNode, ' ,');
-        console.log();
-      } else if (currentNode === this.tail) {
-        console.log(currentNode);
+        console.log(`
+          ${currentNode.data} ---> ${currentNode.next.data}
+          ${currentNode.data} <--- ${currentNode.previous.data} ,
+          `);
+      } else if (currentNode.next === this.head) {
+        console.log(`
+          ${currentNode.data} ---> ${currentNode.next.data}
+          ${currentNode.data} <--- ${currentNode.previous.data} ,
+          `);
         console.log(`]`);
       } else {
-        console.log(currentNode, ' ,');
-        console.log();
+        console.log(`
+        ${currentNode.data} ---> ${currentNode.next.data}
+        ${currentNode.data} <--- ${currentNode.previous.data} ,
+        `);
       }
+
       if (currentNode.next === this.head) break;
+
       currentNode = currentNode.next;
       idx++;
     }

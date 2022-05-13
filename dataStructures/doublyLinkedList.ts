@@ -67,7 +67,6 @@ export class DoublyLinkedList {
       nextNode.previous = node;
       node.next = nextNode;
     } else {
-      console.log(`🚀 ~ file: doublyLinkedList.ts ~ line 62 ~ DoublyLinkedList ~ insert`);
       console.warn('Index out of range');
       process.exit(0);
     }
@@ -78,7 +77,6 @@ export class DoublyLinkedList {
    */
   public removeFirst(): void {
     if (!this.head) {
-      console.log(`🚀 ~ file: doublyLinkedList.ts ~ line 74 ~ DoublyLinkedList ~ removeFirst`);
       console.warn('List is empty');
       process.exit(0);
     } else {
@@ -92,7 +90,6 @@ export class DoublyLinkedList {
    */
   public removeLast(): void {
     if (!this.head) {
-      console.log(`🚀 ~ file: doublyLinkedList.ts ~ line 87 ~ DoublyLinkedList ~ removeFirst`);
       console.warn('List is empty');
       process.exit(0);
     }
@@ -124,7 +121,6 @@ export class DoublyLinkedList {
         currentNode.next.previous = currentNode.previous;
       }
     } else {
-      console.log(`🚀 ~ file: doublyLinkedList.ts ~ line 119 ~ DoublyLinkedList ~ remove`);
       console.warn('Index out of range');
       process.exit(0);
     }
@@ -140,14 +136,21 @@ export class DoublyLinkedList {
     while (currentNode !== null) {
       if (idx === 0) {
         console.log(`[`);
-        console.log(currentNode, ' ,');
-        console.log();
+        console.log(`
+          ${currentNode.data} ---> ${currentNode.next.data}
+          ${currentNode.data} <--- ${currentNode.previous?.data || 'null'} ,
+          `);
       } else if (currentNode.next === null) {
-        console.log(currentNode);
+        console.log(`
+          ${currentNode.data} ---> ${currentNode.next?.data || 'null'}
+          ${currentNode.data} <--- ${currentNode.previous.data} ,
+          `);
         console.log(`]`);
       } else {
-        console.log(currentNode, ' ,');
-        console.log();
+        console.log(`
+        ${currentNode.data} ---> ${currentNode.next.data}
+        ${currentNode.data} <--- ${currentNode.previous.data} ,
+        `);
       }
       currentNode = currentNode.next;
       idx++;

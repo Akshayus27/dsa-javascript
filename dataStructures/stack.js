@@ -1,12 +1,12 @@
-export class Stack {
-  private stack: any[];
-  private head: number;
-  private capacity: number = 0;
+module.exports = class Stack {
+   stack;
+   head;
+   capacity = 0;
 
   /**
    * @param size size of the stack
    */ 
-  constructor(private readonly size: number) {
+  constructor(size) {
     this.stack = new Array(size);
     this.capacity = size;
     this.head = -1;
@@ -16,7 +16,7 @@ export class Stack {
    *
    * @returns true if stack is empty
    */
-  isEmpty(): boolean {
+  isEmpty() {
     return this.head === -1;
   }
 
@@ -24,7 +24,7 @@ export class Stack {
    *
    * @returns true if stack is full
    */
-  isFull(): boolean {
+  isFull() {
     return this.head === this.capacity - 1;
   }
 
@@ -33,7 +33,7 @@ export class Stack {
    * @param item
    * @returns item that is pushed to stack
    */
-  push(item: any): any {
+  push(item) {
     if (this.isFull()) {
       console.warn('Stack is full');
       process.exit(0);
@@ -47,7 +47,7 @@ export class Stack {
   /**
    * @returns item popped from stack
    */
-  pop(): any {
+  pop() {
     if (this.isEmpty()) {
       console.warn('Stack is empty');
       process.exit(0);
@@ -59,7 +59,7 @@ export class Stack {
   /**
    * @returns top item from stack
    */ 
-  peek(): any {
+  peek() {
     if (this.isEmpty()) {
       console.warn('Stack is empty to peek');
       process.exit(0);

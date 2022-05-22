@@ -17,9 +17,6 @@
   },
   "homepage": "https://github.com/Akshayus27/dsa-javasacript#readme",
   "dependencies": {
-    "@types/node": "^17.0.31",
-    "circular-json": "^0.5.9",
-    "ts-node": "^10.7.0",
-    "typescript": "^4.6.4"
+    "circular-json": "^0.5.9"
   }
 }

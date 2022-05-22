@@ -1,18 +1,26 @@
-import { listenerCount } from 'process';
-import { DoublyLinkedList } from './doublyLinkedList';
+const DoublyLinkedList = require('./doublyLinkedList');
 
-export class HashTable {
-  private buckets: DoublyLinkedList[];
-  constructor(private size: number) {
+module.exports = class HashTable {
+  buckets;
+  constructor(size) {
     this.size = size;
     this.buckets = new Array(size);
   }
 
-  private hash(key: number): number {
+  /**
+   * 
+   * @param {String|Number|Object} key 
+   * @returns {Number}
+   */
+  hash(key) {
     return key % this.size;
   }
 
-  public insert(key: number): void {
+  /**
+   * insert the value to the key into the hash table
+   * @param {Number} key 
+   */
+  insert(key) {
     const hashKey = this.hash(key);
     if (!this.buckets[hashKey]) {
       const list = new DoublyLinkedList();
@@ -25,15 +33,14 @@ export class HashTable {
     }
   }
 
-  public search(key: number): boolean {
-    return false;
-  }
-
-  public print(): void {
+  /**
+   * prints the value in each double linked list
+   */
+  print() {
     for (let i = 0; i < this.size; i++) {
       if (this.buckets[i]) {
         this.buckets[i].printList();
       }
     }
   }
-}
+};

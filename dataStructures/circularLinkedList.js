@@ -1,12 +1,17 @@
 class Node {
-  constructor(public data: number, public previous: Node | null = null, public next: Node | null = null) {
+  /**
+   * @param {Any} data
+   * @param {Node|null} previous
+   * @param {Node|null} next
+   */
+  constructor(data, previous = null, next = null) {
     this.data = data;
   }
 }
 
-export class CircularLinkedList {
-  private head: Node | null;
-  private tail: Node | null;
+module.exports = class CircularLinkedList {
+  head = Node | null;
+  tail = Node | null;
 
   constructor() {}
 
@@ -14,7 +19,7 @@ export class CircularLinkedList {
    * @description data is added to the front of the list
    * @param data
    */
-  public insertFirst(data: number): void {
+  insertFirst(data) {
     const node = new Node(data);
     if (!this.head) {
       this.head = node;
@@ -33,7 +38,7 @@ export class CircularLinkedList {
    * @description data is added to the end of the list
    * @param data
    */
-  public insertLast(data: number): void {
+  insertLast(data) {
     const node = new Node(data);
     if (!this.head) {
       this.head = node;
@@ -52,7 +57,7 @@ export class CircularLinkedList {
    * @param data
    * @param index
    */
-  public insert(data: number, index: number): void {
+  insert(data, index) {
     const node = new Node(data);
     let currentIdx = 0;
     let currentNode = this.head;
@@ -79,7 +84,7 @@ export class CircularLinkedList {
   /**
    * @description data is removed from the front of the list
    */
-  public removeFirst(): void {
+  removeFirst() {
     if (!this.head) {
       console.warn('List is empty');
       process.exit(0);
@@ -93,7 +98,7 @@ export class CircularLinkedList {
   /**
    * @description data is removed from the end of the list
    */
-  public removeLast(): void {
+  removeLast() {
     if (!this.head) {
       console.warn('List is empty');
       process.exit(0);
@@ -107,7 +112,7 @@ export class CircularLinkedList {
    * @description data is removed from the given index
    * @param index
    */
-  public remove(index: number): void {
+  remove(index) {
     let currentIdx = 0;
     let currentNode = this.head;
 
@@ -135,7 +140,7 @@ export class CircularLinkedList {
   /**
    * @description prints the data of the linked list
    */
-  public printList(): void {
+  printList() {
     let currentNode = this.head;
     let idx = 0;
 

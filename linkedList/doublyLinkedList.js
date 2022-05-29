@@ -4,16 +4,18 @@ class Node {
    * @param {Node|null} previous
    * @param {Node|null} next
    */
-  constructor(data, previous = null, next = null) {
+  constructor(data) {
     this.data = data;
+    this.previous = null;
+    this.next = null;
   }
 }
 
-export class DoublyLinkedList {
-  head = Node | null;
-  tail = Node | null;
-
-  constructor() {}
+module.exports = class DoublyLinkedList {
+  constructor() {
+    this.head = null;
+    this.tail = null;
+  }
 
   /**
    * @description data is added to the front of the list
@@ -161,4 +163,4 @@ export class DoublyLinkedList {
       idx++;
     }
   }
-}
+};

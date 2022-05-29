@@ -1,7 +1,6 @@
-const DoublyLinkedList = require('./doublyLinkedList');
+const DoublyLinkedList = require('../linkedList/doublyLinkedList');
 
 module.exports = class HashTable {
-  buckets;
   constructor(size) {
     this.size = size;
     this.buckets = new Array(size);

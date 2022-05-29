@@ -1,9 +1,4 @@
 module.exports = class Deque {
-  deque = [];
-  front;
-  rear;
-  size;
-
   /**
    *
    * @param size size of the deque

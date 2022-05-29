@@ -1,11 +1,7 @@
 module.exports = class Stack {
-   stack;
-   head;
-   capacity = 0;
-
   /**
    * @param size size of the stack
-   */ 
+   */
   constructor(size) {
     this.stack = new Array(size);
     this.capacity = size;
@@ -58,7 +54,7 @@ module.exports = class Stack {
 
   /**
    * @returns top item from stack
-   */ 
+   */
   peek() {
     if (this.isEmpty()) {
       console.warn('Stack is empty to peek');
@@ -66,4 +62,4 @@ module.exports = class Stack {
     }
     return this.stack[this.head];
   }
-}
+};

@@ -1,9 +1,4 @@
 module.exports = class Queue {
-  queue = [];
-  front;
-  rear;
-  size;
-
   /**
    * @param size size of the queue
    */

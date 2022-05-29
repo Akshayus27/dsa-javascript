@@ -1,14 +1,14 @@
 const CircularJSON = require('circular-json');
 
-const Stack = require('./dataStructures/stack');
-const Queue = require('./dataStructures/queue');
-const Deque = require('./dataStructures/deque');
+const Stack = require('./stack/stack');
+const Queue = require('./queue/queue');
+const Deque = require('./queue/deque');
 
-const SinglyLinkedList = require('./dataStructures/singlyLinkedList');
-const DoublyLinkedList = require('./dataStructures/doublyLinkedList');
-const CircularLinkedList = require('./dataStructures/circularLinkedList');
+const SinglyLinkedList = require('./linkedList/singlyLinkedList');
+const DoublyLinkedList = require('./linkedList/doublyLinkedList');
+const CircularLinkedList = require('./linkedList/circularLinkedList');
 
-const HashTable = require('./dataStructures/hashTable');
+const HashTable = require('./hash/hashTable');
 
 const hashTable = new HashTable(5);
 
